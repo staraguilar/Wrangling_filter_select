@@ -226,9 +226,16 @@ There were 4 Comedies which were Big Fish, Forrest Gump, Homen Que Copiava O, an
 3. Create a subset of only Harry Potter movies with the title, rating, budget, and votes. Which movies are included in this data? Which is highest rated? Which has the most votes on imdb.com?
 
 ```{r}
+HarryPotter <- movies %>%
 
+filter(str_detect(title, "Harry Potter")) %>%
+select(title, rating, budget, votes)
+
+HarryPotter
 ```
-
+  
+The Harry Potter movies included in this data are Harry Potter and the Chamber of Secrets, Harry Potter and the Prisoner of Azkaban, and Harry Potter and the Sorcerer's Stone. The highest rated is Harry Potter and the prisoner of Azkaban with a rating or 7.8. Harry Potter and the sorcerer's stone has the most votes on imdb.com 46741. 
+  
 4. What is the highest budget for a movie that is an Animation or Comedy with at least 100 votes?
 
 ```{r}
