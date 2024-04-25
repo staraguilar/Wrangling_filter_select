@@ -62,8 +62,11 @@ This one is probably the most useful verb for data wrangling. You can see from t
 
 ```{r}
 # Pay attention to the usage of the pipe
-movies %>%               # start with the full dataset, and then
-  filter(year >= 1965)   # give me only movies where the year is greater than or equal to 1965
+movies %>%              
+  filter(year >= 1965) 
+
+```
+# give me only movies where the year is greater than or equal to 1965
 
 # Some simple practice and review for using filters
 
