@@ -65,7 +65,6 @@ This one is probably the most useful verb for data wrangling. You can see from t
 movies %>%              
   filter(year >= 1965) 
 
-```
 # give me only movies where the year is greater than or equal to 1965
 
 # Some simple practice and review for using filters
@@ -214,7 +213,15 @@ There were 1,248 movies released in 1995.
 
 ```{r}
 
+long_highrated_comedies <- movies %>%
+
+filter(Comedy == 1, !mpaa == "", rating > 8, length > 120) %>%
+select(title, year, rating, length, mpaa)
+
+long_highrated_comedies
 ```
+There were 4 Comedies which were Big Fish, Forrest Gump, Homen Que Copiava O, and The Incredibles with an MPAA rating, over 120 minutes having a rating above 8. 
+
 
 3. Create a subset of only Harry Potter movies with the title, rating, budget, and votes. Which movies are included in this data? Which is highest rated? Which has the most votes on imdb.com?
 
